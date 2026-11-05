@@ -1,0 +1,338 @@
+[
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/CombatAIController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/CombatEnemy.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/CombatEnemySpawner.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/CombatStateTreeUtility.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/EnvQueryContext_Danger.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/AI/EnvQueryContext_Player.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Animation/AnimNotify_CheckChargedAttack.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Animation/AnimNotify_CheckCombo.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Animation/AnimNotify_DoAttackTrace.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/CombatCharacter.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/CombatGameMode.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/CombatPlayerController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Gameplay/CombatActivationVolume.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Gameplay/CombatCheckpointVolume.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Gameplay/CombatDamageableBox.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Gameplay/CombatDummy.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Gameplay/CombatLavaFloor.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Interfaces/CombatActivatable.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Interfaces/CombatAttacker.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/Interfaces/CombatDamageable.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Combat/UI/CombatLifeBar.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Platforming/Animation/AnimNotify_EndDash.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Platforming/PlatformingCharacter.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Platforming/PlatformingGameMode.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_Platforming/PlatformingPlayerController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/AI/SideScrollingAIController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/AI/SideScrollingNPC.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/AI/SideScrollingStateTreeUtility.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/Gameplay/SideScrollingJumpPad.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/Gameplay/SideScrollingMovingPlatform.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/Gameplay/SideScrollingPickup.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/Gameplay/SideScrollingSoftPlatform.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/Interfaces/SideScrollingInteractable.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/SideScrollingCameraManager.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/SideScrollingCharacter.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/SideScrollingGameMode.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/SideScrollingPlayerController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/Variant_SideScrolling/UI/SideScrollingUI.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/tp_8djv104_tp3.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/tp_8djv104_tp3Character.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/tp_8djv104_tp3GameMode.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	},
+	{
+		"file": "/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/Source/tp_8djv104_tp3/tp_8djv104_tp3PlayerController.cpp",
+		"arguments": [
+			"/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v26_clang-20.1.8-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/warpersan/Projects/Unreal Engine/tp_8djv104_tp3/.vscode/compileCommands_tp_8djv104_tp3/tp_8djv104_tp3.0.rsp"
+		],
+		"directory": "/home/warpersan/.unrealengine/Linux_Unreal_Engine_5.8.2/Engine/Source"
+	}
+]
