@@ -71,10 +71,6 @@ void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* Player
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		// Jumping
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
-
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Move);
 		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this,
@@ -159,16 +155,4 @@ void Atp_8djv104_tp3Character::DoLook(float Yaw, float Pitch)
 		AddControllerYawInput(Yaw);
 		AddControllerPitchInput(Pitch);
 	}
-}
-
-void Atp_8djv104_tp3Character::DoJumpStart()
-{
-	// signal the character to jump
-	Jump();
-}
-
-void Atp_8djv104_tp3Character::DoJumpEnd()
-{
-	// signal the character to stop jumping
-	StopJumping();
 }
