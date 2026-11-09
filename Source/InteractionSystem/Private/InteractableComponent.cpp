@@ -3,9 +3,10 @@
 UInteractableComponent::UInteractableComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
+	SetIsReplicatedByDefault(true);
 }
 
-void UInteractableComponent::EnableFeedback(AActor* Instigator)
+void UInteractableComponent::EnableFeedback(AActor* Instigator) const
 {
 	if (!OnEnterFeedback.IsBound())
 		return;
@@ -17,7 +18,7 @@ void UInteractableComponent::EnableFeedback(AActor* Instigator)
 	OnEnterFeedback.Broadcast(Owner);
 }
 
-void UInteractableComponent::DisableFeedback(AActor* Instigator)
+void UInteractableComponent::DisableFeedback(AActor* Instigator) const
 {
 	if (!OnExitFeedback.IsBound())
 		return;

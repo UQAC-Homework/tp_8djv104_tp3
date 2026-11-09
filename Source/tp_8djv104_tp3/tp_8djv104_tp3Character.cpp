@@ -10,7 +10,6 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
-#include "InteractableComponent.h"
 #include "tp_8djv104_tp3.h"
 
 Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
@@ -22,6 +21,8 @@ Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
+	
+	bReplicates = true;
 
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true;

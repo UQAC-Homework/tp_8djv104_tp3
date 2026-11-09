@@ -9,7 +9,7 @@ UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class INTERACTIONSYSTEM_API UInteractorComponent : public UActorComponent
 {
 	GENERATED_BODY()
-	
+
 	/// List of every interactable in range
 	TArray<TWeakObjectPtr<UInteractableComponent>> Interactables;
 

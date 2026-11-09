@@ -32,10 +32,10 @@ public:
 	UInteractableComponent();
 
 	/// Enables the feedback of an interaction
-	void EnableFeedback(AActor* Instigator);
+	void EnableFeedback(AActor* Instigator) const;
 
 	/// Disables the feedback of an interaction
-	void DisableFeedback(AActor* Instigator);
+	void DisableFeedback(AActor* Instigator) const;
 
 	void Interact();
 };

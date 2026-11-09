@@ -3,13 +3,14 @@
 UInteractorComponent::UInteractorComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
+	SetIsReplicatedByDefault(true);
 }
 
 void UInteractorComponent::EnterFeedback(AActor* Actor)
 {
 	const auto Owner = GetOwner();
 	check(Owner);
-	
+
 	if (Owner->HasAuthority())
 		return;
 
@@ -27,7 +28,7 @@ void UInteractorComponent::ExitFeedback(AActor* Actor)
 {
 	const auto Owner = GetOwner();
 	check(Owner);
-	
+
 	if (Owner->HasAuthority())
 		return;
 
