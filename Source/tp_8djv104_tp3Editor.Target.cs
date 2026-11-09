@@ -11,5 +11,14 @@ public class tp_8djv104_tp3EditorTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V7;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_8;
 		ExtraModuleNames.Add("tp_8djv104_tp3");
+		RegisterModulesCreatedByRider();
+	}
+
+	private void RegisterModulesCreatedByRider()
+	{
+		ExtraModuleNames.AddRange(new string[]
+		{
+			"InteractionSystem"
+		});
 	}
 }

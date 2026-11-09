@@ -18,10 +18,12 @@ public class tp_8djv104_tp3 : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate"
+			"Slate",
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+		PrivateDependencyModuleNames.AddRange(new string[] {
+			"InteractionSystem"
+		});
 
 		PublicIncludePaths.AddRange(new string[] {
 			"tp_8djv104_tp3",

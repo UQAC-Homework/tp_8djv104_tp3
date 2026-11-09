@@ -10,13 +10,14 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "InteractableComponent.h"
 #include "tp_8djv104_tp3.h"
 
 Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-		
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -46,29 +47,48 @@ Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
 
+	InteractionRange = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionRange"));
+	InteractionRange->SetupAttachment(RootComponent);
+	InteractionRange->SetSphereRadius(25);
+
+	InteractorComponent = CreateDefaultSubobject<UInteractorComponent>(TEXT("InteractorComponent"));
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+}
+
+void Atp_8djv104_tp3Character::BeginPlay()
+{
+	Super::BeginPlay();
+
+	check(InteractionRange);
+	InteractionRange->OnComponentBeginOverlap.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapBegin);
+	InteractionRange->OnComponentEndOverlap.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapEnd);
 }
 
 void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
-	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-		
+	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
 		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Move);
-		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Look);
+		EnhancedInputComponent->BindAction(MouseLookAction, ETriggerEvent::Triggered, this,
+		                                   &Atp_8djv104_tp3Character::Look);
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Look);
 	}
 	else
 	{
-		UE_LOG(Logtp_8djv104_tp3, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+		UE_LOG(Logtp_8djv104_tp3, Error,
+		       TEXT(
+			       "'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."
+		       ), *GetNameSafe(this));
 	}
 }
 
@@ -88,6 +108,27 @@ void Atp_8djv104_tp3Character::Look(const FInputActionValue& Value)
 
 	// route the input
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
+}
+
+void Atp_8djv104_tp3Character::OnInteractOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+                                                      UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+                                                      bool bFromSweep, const FHitResult& SweepResult) const
+{
+	if (OtherActor == this)
+		return;
+
+	check(InteractorComponent);
+	InteractorComponent->EnterFeedback(OtherActor);
+}
+
+void Atp_8djv104_tp3Character::OnInteractOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+                                                    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) const
+{
+	if (OtherActor == this)
+		return;
+
+	check(InteractorComponent);
+	InteractorComponent->ExitFeedback(OtherActor);
 }
 
 void Atp_8djv104_tp3Character::DoMove(float Right, float Forward)
