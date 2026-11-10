@@ -27,19 +27,6 @@ public class tp_8djv104_tp3 : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"tp_8djv104_tp3",
-			"tp_8djv104_tp3/Variant_Platforming",
-			"tp_8djv104_tp3/Variant_Platforming/Animation",
-			"tp_8djv104_tp3/Variant_Combat",
-			"tp_8djv104_tp3/Variant_Combat/AI",
-			"tp_8djv104_tp3/Variant_Combat/Animation",
-			"tp_8djv104_tp3/Variant_Combat/Gameplay",
-			"tp_8djv104_tp3/Variant_Combat/Interfaces",
-			"tp_8djv104_tp3/Variant_Combat/UI",
-			"tp_8djv104_tp3/Variant_SideScrolling",
-			"tp_8djv104_tp3/Variant_SideScrolling/AI",
-			"tp_8djv104_tp3/Variant_SideScrolling/Gameplay",
-			"tp_8djv104_tp3/Variant_SideScrolling/Interfaces",
-			"tp_8djv104_tp3/Variant_SideScrolling/UI"
 		});
 
 		// Uncomment if you are using Slate UI
