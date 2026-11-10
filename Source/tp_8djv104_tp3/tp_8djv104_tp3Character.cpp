@@ -155,7 +155,7 @@ void Atp_8djv104_tp3Character::Interact()
 		HitResult,
 		Start,
 		End,
-		ECC_Visibility,
+		ECC_WorldDynamic,
 		CollisionParams
 	);
 	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 2.0f);
