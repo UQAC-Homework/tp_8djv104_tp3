@@ -6,30 +6,25 @@ UInteractableComponent::UInteractableComponent()
 	SetIsReplicatedByDefault(true);
 }
 
-void UInteractableComponent::EnableFeedback(AActor* Instigator) const
+void UInteractableComponent::EnableFeedback(APawn* Instigator) const
 {
 	if (!OnEnterFeedback.IsBound())
 		return;
 
 	check(Instigator);
-	const auto Owner = Cast<APawn>(Instigator);
-
-	check(Owner);
-	OnEnterFeedback.Broadcast(Owner);
+	OnEnterFeedback.Broadcast(Instigator);
 }
 
-void UInteractableComponent::DisableFeedback(AActor* Instigator) const
+void UInteractableComponent::DisableFeedback(APawn* Instigator) const
 {
 	if (!OnExitFeedback.IsBound())
 		return;
 
 	check(Instigator);
-	const auto Owner = Cast<APawn>(Instigator);
-
-	check(Owner);
-	OnExitFeedback.Broadcast(Owner);
+	OnExitFeedback.Broadcast(Instigator);
 }
 
-void UInteractableComponent::Interact()
+void UInteractableComponent::Interact_Implementation(APawn* Instigator)
 {
+	OnInteract.Broadcast(Instigator);
 }

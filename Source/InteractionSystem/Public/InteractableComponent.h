@@ -32,10 +32,12 @@ public:
 	UInteractableComponent();
 
 	/// Enables the feedback of an interaction
-	void EnableFeedback(AActor* Instigator) const;
+	void EnableFeedback(APawn* Instigator) const;
 
 	/// Disables the feedback of an interaction
-	void DisableFeedback(AActor* Instigator) const;
+	void DisableFeedback(APawn* Instigator) const;
 
-	void Interact();
+	/// Interacts with this interaction
+	UFUNCTION(Server, Reliable)
+	void Interact(APawn* Instigator);
 };

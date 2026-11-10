@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "tp_8djv104_tp3.h"
+#include "Net/UnrealNetwork.h"
 
 Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 {
@@ -21,8 +22,9 @@ Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
-	
+
 	bReplicates = true;
+	Gold = 0;
 
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -50,9 +52,10 @@ Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 
 	InteractionRange = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionRange"));
 	InteractionRange->SetupAttachment(RootComponent);
-	InteractionRange->SetSphereRadius(25);
+	InteractionRange->SetSphereRadius(250);
 
 	InteractorComponent = CreateDefaultSubobject<UInteractorComponent>(TEXT("InteractorComponent"));
+	
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
@@ -67,6 +70,17 @@ void Atp_8djv104_tp3Character::BeginPlay()
 	InteractionRange->OnComponentEndOverlap.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapEnd);
 }
 
+void Atp_8djv104_tp3Character::Server_AddGold_Implementation(const int32 Amount)
+{
+	if (!HasAuthority())
+		return;
+
+	Gold += Amount;
+
+	if (GetNetMode() == NM_ListenServer)
+		OnRep_Gold();
+}
+
 void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
@@ -79,6 +93,9 @@ void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* Player
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Look);
+		
+		// Interacting
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Interact);
 	}
 	else
 	{
@@ -87,6 +104,21 @@ void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* Player
 			       "'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."
 		       ), *GetNameSafe(this));
 	}
+}
+
+void Atp_8djv104_tp3Character::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	
+	DOREPLIFETIME(Atp_8djv104_tp3Character, Gold);
+}
+
+void Atp_8djv104_tp3Character::OnRep_Gold()
+{
+	if (!OnGoldUpdated.IsBound())
+		return;
+	
+	OnGoldUpdated.Broadcast(Gold);
 }
 
 void Atp_8djv104_tp3Character::Move(const FInputActionValue& Value)
@@ -105,6 +137,33 @@ void Atp_8djv104_tp3Character::Look(const FInputActionValue& Value)
 
 	// route the input
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
+}
+
+void Atp_8djv104_tp3Character::Interact()
+{
+	check(FollowCamera);
+	
+	const auto Start = FollowCamera->GetComponentLocation();
+	const auto End = Start + FollowCamera->GetForwardVector() * 1000.0f;
+
+	FHitResult HitResult;
+
+	FCollisionQueryParams CollisionParams;
+	CollisionParams.AddIgnoredActor(this);
+
+	const auto bHit = GetWorld()->LineTraceSingleByChannel(
+		HitResult,
+		Start,
+		End,
+		ECC_Visibility,
+		CollisionParams
+	);
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 2.0f);
+
+	if (!bHit)
+		return;
+
+	DoInteract(HitResult.GetActor());
 }
 
 void Atp_8djv104_tp3Character::OnInteractOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
@@ -156,4 +215,12 @@ void Atp_8djv104_tp3Character::DoLook(float Yaw, float Pitch)
 		AddControllerYawInput(Yaw);
 		AddControllerPitchInput(Pitch);
 	}
+}
+
+void Atp_8djv104_tp3Character::DoInteract(AActor* Target)
+{
+	check(Target);
+	UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *Target->GetName());
+
+	InteractorComponent->Interact(Target);
 }
