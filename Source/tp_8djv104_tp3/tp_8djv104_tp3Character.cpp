@@ -68,7 +68,7 @@ void Atp_8djv104_tp3Character::BeginPlay()
 
 	check(InteractionRange);
 	check(InteractionSphere);
-	InteractionRange->Initialize(InteractionSphere);
+	InteractionRange->SetCollisionRange(InteractionSphere);
 	InteractionRange->OnActorEnterRange.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapBegin);
 	InteractionRange->OnActorExitRange.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapEnd);
 }

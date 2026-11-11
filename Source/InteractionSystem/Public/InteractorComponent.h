@@ -7,6 +7,7 @@
 
 #define INTERACT "Interact"
 
+/// Component responsible to send interaction requests
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class INTERACTIONSYSTEM_API UInteractorComponent : public UActorComponent
 {

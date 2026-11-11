@@ -8,6 +8,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnActorEnterRange, AActor*, Actor);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnActorExitRange, AActor*, Actor);
 
+/// Component responsible to handle the range of interactions
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class INTERACTIONSYSTEM_API UInteractionRangeComponent : public UActorComponent
 {
@@ -39,8 +40,8 @@ class INTERACTIONSYSTEM_API UInteractionRangeComponent : public UActorComponent
 public:
 	UInteractionRangeComponent();
 
-	/// Initializes the collision range with the given collision
-	void Initialize(UPrimitiveComponent* InRangeCollision);
+	/// Sets the interaction range from the given collision
+	void SetCollisionRange(UPrimitiveComponent* InRangeCollision);
 
 	/// Called when an actor enters the interaction range
 	UPROPERTY(BlueprintAssignable, Category="Interaction")
