@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InteractionRangeComponent.h"
 #include "InteractorComponent.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Character.h"
@@ -38,13 +39,17 @@ class Atp_8djv104_tp3Character : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
 
+	/// Interaction Sphere
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<USphereComponent> InteractionSphere;
+
 	/// Interaction Range
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
-	USphereComponent* InteractionRange;
+	TObjectPtr<UInteractionRangeComponent> InteractionRange;
 	
 	/// Interactor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
-	UInteractorComponent* InteractorComponent;
+	TObjectPtr<UInteractorComponent> InteractorComponent;
 
 protected:
 	/** Move Input Action */
@@ -91,14 +96,11 @@ protected:
 	
 	/// Called when an actor enters the interaction range
 	UFUNCTION()
-	void OnInteractOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-								UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
-								const FHitResult& SweepResult) const;
+	void OnInteractOverlapBegin(AActor* Actor) const;
 
 	/// Called when an actor exits the interaction range
 	UFUNCTION()
-	void OnInteractOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-							  UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) const;
+	void OnInteractOverlapEnd(AActor* Actor) const;
 public:
 	/** Handles move inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")

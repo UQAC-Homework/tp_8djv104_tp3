@@ -51,12 +51,12 @@ Atp_8djv104_tp3Character::Atp_8djv104_tp3Character()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
 
-	InteractionRange = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionRange"));
-	InteractionRange->SetupAttachment(RootComponent);
-	InteractionRange->SetSphereRadius(250);
+	InteractionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionSphere"));
+	InteractionSphere->SetupAttachment(RootComponent);
+	InteractionSphere->SetSphereRadius(250);
 
+	InteractionRange = CreateDefaultSubobject<UInteractionRangeComponent>(TEXT("InteractionRange"));
 	InteractorComponent = CreateDefaultSubobject<UInteractorComponent>(TEXT("InteractorComponent"));
-	
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
@@ -67,8 +67,10 @@ void Atp_8djv104_tp3Character::BeginPlay()
 	Super::BeginPlay();
 
 	check(InteractionRange);
-	InteractionRange->OnComponentBeginOverlap.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapBegin);
-	InteractionRange->OnComponentEndOverlap.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapEnd);
+	check(InteractionSphere);
+	InteractionRange->Initialize(InteractionSphere);
+	InteractionRange->OnActorEnterRange.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapBegin);
+	InteractionRange->OnActorExitRange.AddDynamic(this, &Atp_8djv104_tp3Character::OnInteractOverlapEnd);
 }
 
 void Atp_8djv104_tp3Character::Server_AddGold_Implementation(const int32 Amount)
@@ -94,9 +96,10 @@ void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* Player
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Look);
-		
+
 		// Interacting
-		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &Atp_8djv104_tp3Character::Interact);
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this,
+		                                   &Atp_8djv104_tp3Character::Interact);
 	}
 	else
 	{
@@ -110,7 +113,7 @@ void Atp_8djv104_tp3Character::SetupPlayerInputComponent(UInputComponent* Player
 void Atp_8djv104_tp3Character::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	
+
 	DOREPLIFETIME(Atp_8djv104_tp3Character, Gold);
 }
 
@@ -118,7 +121,7 @@ void Atp_8djv104_tp3Character::OnRep_Gold()
 {
 	if (!OnGoldUpdated.IsBound())
 		return;
-	
+
 	OnGoldUpdated.Broadcast(Gold);
 }
 
@@ -143,7 +146,7 @@ void Atp_8djv104_tp3Character::Look(const FInputActionValue& Value)
 void Atp_8djv104_tp3Character::Interact()
 {
 	check(FollowCamera);
-	
+
 	const auto Start = FollowCamera->GetComponentLocation();
 	const auto End = Start + FollowCamera->GetForwardVector() * 1000.0f;
 
@@ -167,25 +170,16 @@ void Atp_8djv104_tp3Character::Interact()
 	DoInteract(HitResult.GetActor());
 }
 
-void Atp_8djv104_tp3Character::OnInteractOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-                                                      UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
-                                                      bool bFromSweep, const FHitResult& SweepResult) const
+void Atp_8djv104_tp3Character::OnInteractOverlapBegin(AActor* Actor) const
 {
-	if (OtherActor == this)
-		return;
-
 	check(InteractorComponent);
-	InteractorComponent->EnterFeedback(OtherActor);
+	InteractorComponent->EnterFeedback(Actor);
 }
 
-void Atp_8djv104_tp3Character::OnInteractOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-                                                    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) const
+void Atp_8djv104_tp3Character::OnInteractOverlapEnd(AActor* Actor) const
 {
-	if (OtherActor == this)
-		return;
-
 	check(InteractorComponent);
-	InteractorComponent->ExitFeedback(OtherActor);
+	InteractorComponent->ExitFeedback(Actor);
 }
 
 void Atp_8djv104_tp3Character::DoMove(float Right, float Forward)
@@ -220,8 +214,6 @@ void Atp_8djv104_tp3Character::DoLook(float Yaw, float Pitch)
 
 void Atp_8djv104_tp3Character::DoInteract(AActor* Target)
 {
-	check(Target);
-	UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *Target->GetName());
-
+	check(InteractorComponent);
 	InteractorComponent->Interact(Target);
 }
